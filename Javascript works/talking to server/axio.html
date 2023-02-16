@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    
+    <button onclick="get()"> get</button>
+    <button onclick="posts()">post</button>
+    <button onclick="patch()">patch</button>
+    <button onclick="remove()">remove</button>
+    <script>
+        function get(){
+            axios.get("https://jsonplaceholder.typicode.com/users")
+        .then(mango => {console.log(mango)})
+        .catch(orange => {console.log(orange)})
+
+        }
+        function posts(){
+            
+            axios.post("https://jsonplaceholder.typicode.com/users", {name:"sirnice",email:"sirnice5419@gamil.com"})
+        .then(rep => {console.log(rep)})
+        .catch(erro =>{console.log(erro)})
+
+        }
+        function patch(){
+            axios.patch("https://jsonplaceholder.typicode.com/users/id:11", {name:"mango",email:"john@gamil.com"})
+        .then(resp => {console.log(resp)})
+        .catch(done =>{console.log(done)})
+        }
+        function remove(){
+            axios.delete("https://jsonplaceholder.typicode.com/users/id:11", {name:"mango",email:"john@gamil.com"})
+        .then(resp => {console.log(resp)})
+        .catch(done =>{console.log(done)})
+        }
+
+    
+
+        
+
+
+
+
+       
+
+
+    </script>
+</body>
+</html>

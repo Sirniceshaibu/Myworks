@@ -1,0 +1,17 @@
+
+<DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+    <div id="output"></div>
+    <script>
+        var arr = [' sundays','mondays','tuesdays','wenesdays','thursdays','fridays','satudays'];
+        for(var index = 0; index < arr.length; index++) {
+            var element = arr[index];
+            document.getElementById('output').innerHTML += '<p>' + index + ' - ' + element + '</p>';    
+        }
+    </script>
+</body>
+</html>
